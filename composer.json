@@ -1,0 +1,46 @@
+{
+    "name": "integrity/wordpress-workbench",
+    "description": "Ready-to-code Wordpress development environment.",
+    "type": "wordpress-core",
+    "require": {
+        "roots/wordpress-no-content": "^6.1",
+        "roots/wordpress-core-installer": "^1.100",
+        "integrity/wordpress-gitpod": "0.0.1",
+        "cweagans/composer-patches": "^1.7",
+        "symfony/console": "^6.1",
+        "phlak/strgen": "^3.0"
+    },
+    "config": {
+        "bin-dir": "bin",
+        "allow-plugins": {
+            "roots/wordpress-core-installer": true,
+            "cweagans/composer-patches": true
+        }
+    },
+    "autoload": {
+        "psr-4": {"Integrity\\WordpressWorkbench\\": "src/"}
+    },
+    "extra": {
+        "wordpress-install-dir": "wordpress",
+        "installer-paths": {
+            "src/wordpress/wp-content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "src/wordpress/wp-content/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
+        },
+        "composer-exit-on-patch-failure": true,
+        "patches": {
+            "roots/wordpress-no-content": {
+               
+            }
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "packages/*"
+        }
+    ]
+}

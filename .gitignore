@@ -1,0 +1,8 @@
+config.json
+vendor
+bin/*
+!bin/.gitkeep
+src/packages/*
+!src/packages/.gitkeep
+wordpress/*
+!wordpress/.gitkeep
