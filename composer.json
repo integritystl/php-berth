@@ -3,18 +3,20 @@
     "description": "Ready-to-code Wordpress development environment.",
     "type": "wordpress-core",
     "require": {
-        "roots/wordpress-no-content": "^6.1",
+        "roots/wordpress-no-content": "^6.1.1",
         "roots/wordpress-core-installer": "^1.100",
         "integrity/wordpress-gitpod": "0.0.1",
         "cweagans/composer-patches": "^1.7",
         "symfony/console": "^6.1",
-        "phlak/strgen": "^3.0"
+        "phlak/strgen": "^3.0",
+        "wpackagist-theme/twentytwentytwo":"1.3"
     },
     "config": {
         "bin-dir": "bin",
         "allow-plugins": {
             "roots/wordpress-core-installer": true,
-            "cweagans/composer-patches": true
+            "cweagans/composer-patches": true,
+            "composer/installers": true
         }
     },
     "autoload": {
@@ -23,10 +25,10 @@
     "extra": {
         "wordpress-install-dir": "wordpress",
         "installer-paths": {
-            "src/wordpress/wp-content/plugins/{$name}/": [
+            "wordpress/wp-content/plugins/{$name}/": [
                 "type:wordpress-plugin"
             ],
-            "src/wordpress/wp-content/themes/{$name}/": [
+            "wordpress/wp-content/themes/{$name}/": [
                 "type:wordpress-theme"
             ]
         },
@@ -39,8 +41,25 @@
     },
     "repositories": [
         {
+            "type":"composer",
+            "url":"https://wpackagist.org",
+            "only": [
+                "wpackagist-plugin/*",
+                "wpackagist-theme/*"
+            ]
+        },
+        {
+            "type":"composer",
+            "url":"https://repo.packagist.org"
+        },
+        {
             "type": "path",
             "url": "packages/*"
         }
-    ]
+    ],
+    "scripts": {
+        "post-autoload-dump" : [
+            "bin/wb config:generate"
+        ]
+    }
 }

@@ -201,8 +201,6 @@ class Configuration {
     // also convert booleans to string
     private function quoteConfigValue(string $value)
     {
-        echo "\n" . $value . "\n";
-
         $value = (null !== filter_var($value, FILTER_VALIDATE_BOOLEAN, FILTER_NULL_ON_FAILURE)) ? 
         $value ? 'true' : 'false': 
         "'" . $value . "'";

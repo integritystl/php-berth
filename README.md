@@ -9,11 +9,17 @@ It gan be frustrating to collaborate on a project when the developers use a vari
 * Patch file for adding autoloader into wp-config.php
 * instructions on how to create a build to go to a hosting platform like wp-engine
 
+## Init 
+```
+docker-compose run composer update
+```
+
 
 ## Structure 
 
 * [Wordpress Composer Package](https://github.com/roots/wordpress-no-content)
 * [Wordpress in its own directory](https://wordpress.org/support/article/giving-wordpress-its-own-directory/)
+* [Wordpress + Docker Quickstart](https://github.com/docker/awesome-compose/tree/master/official-documentation-samples/wordpress/)
 
 ## Configure Wordpress Core
 
