@@ -3,7 +3,7 @@
     "description": "Ready-to-code Wordpress development environment.",
     "type": "wordpress-core",
     "require": {
-        "roots/wordpress-no-content": "^6.1.1",
+        "roots/wordpress-no-content": "6.1.1",
         "roots/wordpress-core-installer": "^1.100",
         "integrity/wordpress-gitpod": "0.0.1",
         "cweagans/composer-patches": "^1.7",
