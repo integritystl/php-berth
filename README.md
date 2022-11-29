@@ -10,8 +10,21 @@ It gan be frustrating to collaborate on a project when the developers use a vari
 * instructions on how to create a build to go to a hosting platform like wp-engine
 
 ## Init 
+
+0. 
 ```
 docker-compose run composer update
+```
+
+1. 
+```
+docker-compose up -d
+```
+
+2. 
+run the wordpress cli install
+```
+wp core install --url="localhost"  --title="Blog Title" --admin_user="admin" --admin_password="admin" --admin_email="mike.pisula@integrityxd.com"
 ```
 
 

@@ -1,8 +1,7 @@
 config.json
 vendor
+wordpress
 bin/*
 !bin/.gitkeep
 src/packages/*
 !src/packages/.gitkeep
-wordpress/*
-!wordpress/.gitkeep
