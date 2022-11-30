@@ -1,14 +1,13 @@
 {
-    "name": "integrity/wordpress-workbench",
-    "description": "Ready-to-code Wordpress development environment.",
+    "name": "integrity/berth",
+    "description": "Ready-to-code Wordpress development environment boilerplate.",
     "type": "wordpress-core",
     "require": {
-        "roots/wordpress-no-content": "^6.1.1",
         "roots/wordpress-core-installer": "^1.100",
-        "integrity/wordpress-gitpod": "0.0.1",
         "cweagans/composer-patches": "^1.7",
         "symfony/console": "^6.1",
         "phlak/strgen": "^3.0",
+        "integrity/dinghy": "6.1.1",
         "wpackagist-theme/twentytwentytwo":"1.3"
     },
     "config": {
@@ -20,7 +19,7 @@
         }
     },
     "autoload": {
-        "psr-4": {"Integrity\\WordpressWorkbench\\": "src/"}
+        "psr-4": {"Integrity\\Berth\\": "src/"}
     },
     "extra": {
         "wordpress-install-dir": "wordpress",
@@ -59,7 +58,8 @@
     ],
     "scripts": {
         "post-autoload-dump" : [
-            "bin/wb config:generate"
+            "bin/dinghy-app inflate",
+            "bin/dinghy-app config:generate"
         ]
     }
 }

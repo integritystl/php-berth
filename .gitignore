@@ -1,7 +1,9 @@
-config.json
-vendor
-wordpress
+vendor/*
 bin/*
-!bin/.gitkeep
-src/packages/*
-!src/packages/.gitkeep
+!bin/berth
+wordpress
+./config.json
+./docker-compose.yml
+packages/*
+!packages/.gitkeep
+!packages/dinghy/*

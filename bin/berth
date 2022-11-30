@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# For now berth will install the composer dependencies
+docker compose -f ./composer.docker-compose.yml run composer install
