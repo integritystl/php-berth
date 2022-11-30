@@ -2,8 +2,8 @@ vendor/*
 bin/*
 !bin/berth
 wordpress
-./config.json
-./docker-compose.yml
+config.json
+docker-compose.yml
 packages/*
 !packages/.gitkeep
 !packages/dinghy
