@@ -1,19 +1,20 @@
 # Berth
 
-## Why 
 
-It gan be frustrating to collaborate on a project when the developers use a variety of architectures on thier local machine. Gitpod is a cloud solution that runs the environment in the cloud. You can use the browser based code editor or connect to the repo with a local editor. No need for complicated dependency installation on your machine.
+It gan be frustrating to collaborate on a project when the developers use a variety of architectures on thier local machine. Using a common Docker based development environment can help. Additionally, Gitpod is a cloud solution that runs the environment in the cloud. You can use the browser based code editor or connect to the repo with a local editor. No need for complicated dependency installation on your machine.
 
 ## Ideas
 
-* Patch file for adding autoloader into wp-config.php
 * instructions on how to create a build to go to a hosting platform like wp-engine
+* "composer merge"
 
 ## Init 
 
+MVP Start-up steps:
+
 0. 
 ```
-docker-compose run composer update
+bin/berth
 ```
 
 1. 
@@ -22,7 +23,7 @@ docker-compose up -d
 ```
 
 2. 
-run the wordpress cli install
+run the wordpress cli install or use the UI
 ```
 wp core install --url="localhost"  --title="Blog Title" --admin_user="admin" --admin_password="admin" --admin_email="mike.pisula@integrityxd.com"
 ```
