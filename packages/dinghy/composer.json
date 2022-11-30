@@ -1,0 +1,15 @@
+{
+    "name": "integrity/dinghy",
+    "description": "Wordpress Docker Environment",
+    "version": "6.1.1",
+    "require": {
+        "roots/wordpress-no-content": "6.1.1"
+    },
+    "bin": [
+        "bin/dinghy",
+        "bin/dinghy-app"
+    ],
+    "autoload": {
+        "psr-4": {"Integrity\\Dinghy\\": "src/"}
+    }
+}

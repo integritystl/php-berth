@@ -6,4 +6,4 @@ wordpress
 ./docker-compose.yml
 packages/*
 !packages/.gitkeep
-!packages/dinghy/*
+!packages/dinghy

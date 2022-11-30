@@ -1,0 +1,17 @@
+#!/usr/bin/env php
+<?php
+
+include $_composer_autoload_path ?? __DIR__ . '/../vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use Integrity\Dinghy\Console\InstallCommand;
+use Integrity\Dinghy\Console\GenerateConfigurationCommand;
+
+$application = new Application();
+
+//// register commands /////
+$application->add(new InstallCommand());
+$application->add(new GenerateConfigurationCommand());
+////////////////////////////
+
+$application->run();
