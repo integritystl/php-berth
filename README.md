@@ -3,6 +3,9 @@
 
 It gan be frustrating to collaborate on a project when the developers use a variety of architectures on thier local machine. Using a common Docker based development environment can help. Additionally, Gitpod is a cloud solution that runs the environment in the cloud. You can use the browser based code editor or connect to the repo with a local editor. No need for complicated dependency installation on your machine.
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/integritystl/berth)
+
+
 ## Ideas
 
 * instructions on how to create a build to go to a hosting platform like wp-engine
