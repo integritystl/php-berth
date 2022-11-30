@@ -1,9 +1,0 @@
-{
-    "name": "integrity/wordpress-gitpod",
-    "description": "Wordpress Gitpod",
-    "version": "0.0.1",
-    "require": {},
-    "bin": [
-        "bin/wpg"
-    ]
-}

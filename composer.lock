@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b31f41717a7aa29dee896da4832339a9",
+    "content-hash": "733d000f657753465221909585dfb09b",
     "packages": [
         {
             "name": "composer/installers",
@@ -200,18 +200,27 @@
             "time": "2022-01-25T19:21:20+00:00"
         },
         {
-            "name": "integrity/wordpress-gitpod",
-            "version": "0.0.1",
+            "name": "integrity/dinghy",
+            "version": "6.1.1",
             "dist": {
                 "type": "path",
-                "url": "packages/wordpress-gitpod",
-                "reference": "270f51076430c7b23818f88d6c1d7ee764da1cab"
+                "url": "packages/dingy",
+                "reference": "307d6da75ec7cfbbcb997fb1db6362300a5f9663"
+            },
+            "require": {
+                "roots/wordpress-no-content": "6.1.1"
             },
             "bin": [
-                "bin/wpg"
+                "bin/dinghy",
+                "bin/dinghy-app"
             ],
             "type": "library",
-            "description": "Wordpress Gitpod",
+            "autoload": {
+                "psr-4": {
+                    "Integrity\\Dinghy\\": "src/"
+                }
+            },
+            "description": "Wordpress Docker Environment",
             "transport-options": {
                 "relative": true
             }

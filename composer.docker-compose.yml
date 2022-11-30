@@ -1,0 +1,6 @@
+services:
+  composer:
+    container_name: composer
+    image: composer   
+    volumes:
+      - ./:/app 
