@@ -9,5 +9,5 @@ ports:
     port: 1984
     onOpen: open-preview
   - name: Database
-    port: 3306
+    port: 3384
     onOpen: ignore
