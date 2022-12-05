@@ -4,7 +4,7 @@ services:
     build:
       dockerfile: ./vendor/integrity/dinghy/runtimes/nginx/Dockerfile
     ports:
-      - "1984:80"
+      - "0.0.0.0:1984:80"
     volumes:
       - ./vendor:/var/www/html/vendor:rw
       - ./wordpress:/var/www/html/wordpress:rw
@@ -51,6 +51,6 @@ services:
       - MYSQL_USER=wordpress
       - MYSQL_PASSWORD=wordpress
     ports: 
-      - "3306:3306"
+      - "0.0.0.0:3306:3306"
 volumes:
   db_data:
