@@ -1,7 +1,7 @@
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - init: su gitpod; subin/berth # runs during prebuild
-    command: su gitpod; docker-compose up
+  - init: bin/berth # runs during prebuild
+    command: CURRENT_UID=$(id -u):$(id -g) docker-compose up
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:

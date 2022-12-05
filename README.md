@@ -22,7 +22,7 @@ bin/berth
 
 1. 
 ```
-docker-compose up -d
+CURRENT_UID=$(id -u):$(id -g) docker-compose up
 ```
 
 2. 

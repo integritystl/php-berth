@@ -1,5 +1,6 @@
 services:
   web:
+    user: ${CURRENT_UID}
     container_name: web
     build:
       dockerfile: ./vendor/integrity/dinghy/runtimes/nginx/Dockerfile
@@ -13,6 +14,7 @@ services:
       - php
       - db
   php:
+    user: ${CURRENT_UID}
     container_name: wordpress
     build:
       dockerfile: ./vendor/integrity/dinghy/runtimes/php/Dockerfile
@@ -22,6 +24,7 @@ services:
       - ./wordpress:/var/www/html/wordpress:rw
       - ./vendor/integrity/dinghy/runtimes/php/php.ini:/usr/local/etc/php/conf.d/custom.php.ini
   wordpress-cli:
+    user: ${CURRENT_UID}
     container_name: wordpress-cli
     build:
       dockerfile: ./vendor/integrity/dinghy/runtimes/php/Dockerfile
@@ -31,11 +34,13 @@ services:
       - ./wordpress:/var/www/html/wordpress:rw
       - ./vendor/integrity/dinghy/runtimes/php/php.ini:/usr/local/etc/php/conf.d/custom.php.ini
   composer:
+    user: ${CURRENT_UID}
     container_name: composer
     image: composer   
     volumes:
       - ./:/app 
   db:
+    user: ${CURRENT_UID}
     container_name: db
     image: mariadb:latest
     command: '--default-authentication-plugin=mysql_native_password'
