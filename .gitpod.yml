@@ -6,7 +6,7 @@ tasks:
       CURRENT_UID=$(id -u):$(id -g) docker-compose up -d
       gp sync-done docker
   - name: Wordpress Core Install
-    command:
+    command: |
       gp sync-await docker
       sleep 3
       CURRENT_UID=$(id -u):$(id -g) GITPOD_URL=$(gp url) docker compose run wordpress-cli core install --url="$GITPOD_URL" --title="test" --admin_user="admin" --admin_password="admin" --admin_email="mike.pisula@integrityxd.com"
