@@ -1,8 +1,12 @@
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - init: bin/berth # runs during prebuild
+  - name: Start Docker Environment
+    before: bin/berth # runs during prebuild
     command: CURRENT_UID=$(id -u):$(id -g) docker-compose up
-  - command: CURRENT_UID=$(id -u):$(id -g) GITPOD_URL=$(gp url) docker compose run wordpress-cli core install --url="$GITPOD_URL" --title="test" --admin_user="admin" --admin_password="admin" --admin_email="mike.pisula@integrityxd.com"
+  - name: Wordpress Core Install
+    command: |
+      gp ports await 3306
+      CURRENT_UID=$(id -u):$(id -g) GITPOD_URL=$(gp url) docker compose run wordpress-cli core install --url="$GITPOD_URL" --title="test" --admin_user="admin" --admin_password="admin" --admin_email="mike.pisula@integrityxd.com"
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
