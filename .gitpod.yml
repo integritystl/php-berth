@@ -10,6 +10,6 @@ ports:
     onOpen: open-preview
     visibility: public
   - name: Database
-    port: 3384
+    port: 3306
     onOpen: ignore
     visibility: public
