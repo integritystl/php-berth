@@ -8,6 +8,7 @@ tasks:
   - name: Wordpress Core Install
     command: |
       gp sync-await docker
+      sleep 10
       CURRENT_UID=$(id -u):$(id -g) GITPOD_URL=$(gp url) docker compose run wordpress-cli core install --url="$GITPOD_URL" --title="test" --admin_user="admin" --admin_password="admin" --admin_email="mike.pisula@integrityxd.com"
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
