@@ -3,7 +3,7 @@ tasks:
   - name: Start Docker Environment
     before: bin/berth # runs during prebuild
     command: |
-      CURRENT_UID=$(id -u):$(id -g) docker-compose up
+      CURRENT_UID=$(id -u):$(id -g) docker-compose up -d
       gp sync-done docker
   - name: Wordpress Core Install
     command: |
