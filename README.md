@@ -31,7 +31,7 @@ run the wordpress cli install or use the UI
 wp core install --url="localhost"  --title="Blog Title" --admin_user="admin" --admin_password="admin" --admin_email="mike.pisula@integrityxd.com"
 ```
 
-CURRENT_UID=$(id -u):$(id -g) docker compose run wordpress-cli wp core install --url="localhost"  --title="Blog Title" --admin_user="admin" --admin_password="admin" --admin_email="mike.pisula@integrityxd.com"
+CURRENT_UID=$(id -u):$(id -g) docker compose run wordpress-cli core install --url="https://1984-integritystl-berth-5kwgdm9br0q.ws-us77.gitpod.io/" --title="test" --admin_user="admin" --admin_password="admin" --admin_email="mike.pisula@integrityxd.com"
 
 
 ## Structure 
