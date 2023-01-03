@@ -8,7 +8,7 @@
         "symfony/console": "^6.1",
         "phlak/strgen": "^3.0",
         "integrity/dinghy": "6.1.1",
-        "wpackagist-theme/twentytwentytwo":"1.3"
+        "wpackagist-theme/twentytwentythree":"1.0"
     },
     "config": {
         "bin-dir": "bin",
