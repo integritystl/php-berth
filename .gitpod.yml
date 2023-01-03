@@ -9,10 +9,9 @@ tasks:
     command: |
       gp sync-await docker
       sleep 3
-      gp env CURRENT_UID=$(id -u):$(id -g) 
-      gp env GITPOD_URL=$(gp url 1984) 
+      export GITPOD_URL=$(gp url 1984) 
       echo $GITPOD_URL
-      docker compose run wordpress-cli core install --url=$GITPOD_URL --title="test" --admin_user="admin" --admin_password="admin" --admin_email="mike.pisula@integrityxd.com"
+      CURRENT_UID=$(id -u):$(id -g) docker compose run wordpress-cli core install --url=$GITPOD_URL --title="test" --admin_user="admin" --admin_password="admin" --admin_email="mike.pisula@integrityxd.com"
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
