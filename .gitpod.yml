@@ -9,8 +9,8 @@ tasks:
     command: |
       gp sync-await docker
       sleep 3
-      CURRENT_UID=$(id -u):$(id -g) 
-      GITPOD_URL=$(gp url 1984) 
+      set CURRENT_UID=$(id -u):$(id -g) 
+      set GITPOD_URL=$(gp url 1984) 
       echo "${GITPOD_URL}"
       docker compose run wordpress-cli core install --url="${GITPOD_URL}" --title="test" --admin_user="admin" --admin_password="admin" --admin_email="mike.pisula@integrityxd.com"
 
