@@ -53,7 +53,7 @@ class Configuration {
         $this->configuration = json_decode(file_get_contents("config.json"), true);
         $this->content = file_get_contents('./wordpress/wp-config-sample.php');
         // Initialize the Generator
-        $this->strGen = new Generator(CharSet::ALPHA_NUMERIC,CharSet::SPECIAL);
+        $this->strGen = new Generator(CharSet::ALPHA_NUMERIC,'-_=+#?');
         // Automatically generate auth values. These will be overridden
         // later if a value is provided in the config.json
         $this->generateAuth();
