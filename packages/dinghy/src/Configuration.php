@@ -93,11 +93,11 @@ class Configuration {
         }
 
         // add the HTTPS on configuration
-        $https .= "\n";
+        $https .= "\n\n";
         $https = 'if ($_SERVER["HTTP_X_FORWARDED_PROTO"] == "https")';
-        $https .= "\n";
-        $https .= '  $_SERVER["HTTPS"]="on"';
-        $https .= "\n";
+        $https .= "\n\n";
+        $https .= '  $_SERVER["HTTPS"]="on";';
+        $https .= "\n\n";
 
         $replacement .= $https;
 
