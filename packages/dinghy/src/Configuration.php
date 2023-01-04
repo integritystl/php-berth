@@ -92,6 +92,15 @@ class Configuration {
             $replacement .= "\n" . $customConfig ;
         }
 
+        // add the HTTPS on configuration
+        $https = 'if ($_SERVER[\"HTTP_X_FORWARDED_PROTO\"] == \"https\")';
+        $https .= "\n";
+        $https .= '  $_SERVER[\"HTTPS\"]=\"on\"';
+        $https .= "\n";
+
+        $replacement .= $https;
+
+
         $this->content = preg_replace(
             self::CONFIG_CUSTOM_START,
             $replacement,
